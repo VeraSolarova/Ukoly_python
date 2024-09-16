@@ -52,3 +52,12 @@ def info(nazev_mesta):
     
 info("Praha")
 info("New York")
+
+def info2(nazev_mesta):
+        if nazev_mesta in mesta_cr:
+            print(nazev_mesta, mesta_cr[nazev_mesta])
+        else: 
+             print("Neznámé město")
+
+info2("Praha")
+info2("New York")
