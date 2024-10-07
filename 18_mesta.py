@@ -30,9 +30,9 @@ class Stat:
         self.nazev_statu = nazev_statu
         self.seznam_mest = [] # každy stát bude mít list se svými městy 
 
-    def pridat_mesto(self, nazev_mesta: str):
+    def pridat_mesto(self, mesto: "Mesto"):
     # metoda na přidání města do listu příslušného státu, zavolá si ji každé nově vzniklé město 
-        self.seznam_mest.append(nazev_mesta) 
+        self.seznam_mest.append(mesto) 
 
     def __str__(self):
         return self.nazev_statu
@@ -45,7 +45,7 @@ class Mesto:
     def __init__(self, nazev_mesta: str, stat_kde_lezim: Stat) -> None:
         self.nazev_mesta = nazev_mesta
         self.stat_kde_lezim = stat_kde_lezim
-        self.stat_kde_lezim.pridat_mesto(self.nazev_mesta) # volá metodu pridat_mesto z class Stat - přidá město do listu 
+        self.stat_kde_lezim.pridat_mesto(self.mesto) # volá metodu pridat_mesto z class Stat - přidá město do listu 
 
     def info(self):
         print(f"Město {self.nazev_mesta} leží ve státě {self.stat_kde_lezim}") 
