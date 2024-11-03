@@ -1,0 +1,79 @@
+navrhněte tabulku a vztahy pro entity Článek a Autor
+- zjistěte kardinalitu mezi entitami (1:1, 1:N, N:M)
+- zjistěte jaké atributy by mohly mít
+- zdůvodněte náš návrh
+
+odevzdejte jako text
+24_clanek_autor.txt
+
+---------------------------------------------------------------------------------------------------------
+
+N:M
+Autor může napsat více článků, na jednom článku se může podílet více autorů (viz. vědecké články). 
+
+Články se mohou vyskytovat i mimo periodika, např. na webových stránkách, pak se používá url a datum zobrazení.  
+Někde autora neznáme nebo je původcem umělá inteligence, chceme je v databázi? (Beru to tak, že ano.) 
+
+vysvetlivky:
+DOI = "Digital Object Identifier" články mohou, ale nemusí mít přidělené
+ISSN = "International Standard Serial Number - periodika zpravidla mají přidělená čísla 
+
+---------------------------------------------------------------------------------------------------------
+
+Tabulka Autor
+	-id (PK, AI, int)
+	-jmeno (varchar(30), deafualt'')
+	-prijmeni (NN, varchar(50))
+	-email (varchar(50), deafualt'')
+	-id_instituce(FK na Instituce.id, deafualt'')
+
+Tabulka Instituce
+	-id (PK, AI, int)
+	-název (NN, varchar(200))
+	-adresa (varchar, deafualt'')
+
+Tabulka Clanek
+	-id (PK, AI, int)
+	-nazev (NN, varchar)
+	-doi (varchar(100), deafualt'')
+	-id_Periodikum (int, deafualt Null) (FK na Periodikum.id)
+	-id_Vydani (smallint, deafualt Null)(FK na Vydani.id)
+
+	-id_Datum_vydani_rok (smallint, deafualt Null)(FK na Datum_rok.id)
+	-id_Datum_vydani_mesic (tinyint, deafualt Null)(FK na Datum_mesic.id)
+
+	-zdroj_url (varchar(500), deafualt'')
+	-id_Datum_zobrazeni_rok (smallint, deafualt Null)(FK na Datum_rok.id)
+	-id_Datum_zobrazeni_mesic (tinyint, deafualt Null)(FK na Datum_mesic.id)
+	-id_Datum_zobrazeni_den (tinyint, deafualt Null)(FK na Datum_den.id)	
+
+Mezitabulka Clanek_autor
+	-id_Autor (PK, NN, int) (FK na Autor.id)
+	-id_Clanek (PK, NN, int) (FK na Clanek.id)
+	-poradi_autora (tinyint, default 1)
+
+
+Tabulka Vydani
+	-id(PK, AI, smallint)
+	-cislo_vydani (NN, smallint)
+
+Tabulka Periodikum
+	-id (PK, AI, int)
+	-nazev (NN, varchar(100))
+	-issn (smallint, deafualt Null)
+
+Tabulka Datum_den
+	-id (PK, AI, tinyint)
+	-den (NN, tinyint) 
+
+Tabulka Datum_mesic
+	-id (PK, AI, tinyint)
+	-mesic (NN, tinyint)
+
+Tabulka Datum_rok
+	-id (PK, AI , smallint)
+	-rok(NN, year)
+
+
+
+
