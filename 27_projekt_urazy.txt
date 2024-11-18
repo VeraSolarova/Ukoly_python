@@ -1,0 +1,132 @@
+Pro projek jsem si vybrala open data
+
+Urazy a jejich cetnosti: 
+
+urazy( ID úrazu, Pohlaví, Věková kategorie, Typ úrazu, Úmrtí po úrazu)
+
+
+
+https://data.gov.cz/datov%C3%A1-sada?iri=https%3A%2F%2Fdata.gov.cz%2Fzdroj%2Fdatov%C3%A9-sady%2F00024341%2Fd3f9de8b4f92068de1426896ce0b49a5
+
+Formát datové sady: csv
+• Počet záznamů: 34,7 mil
+• Počet popisných atributů: 37
+• Velikost: 3,3GB
+
+https://www.nzip.cz/data/nru/metodicke-popisy/1786-urazy-charakteristika.pdf
+
+( https://www.nzip.cz/data/1789-urazy-prehled-priciny  xlsx ) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Co bych mohla zobrazovat ? 
+
+Tabulky/ grafy
+
+a)nejcastejsich 5 diagnoz urazu podle:
+
+
+pohlavi 
+(zeny, muzi, oboji)
+
+vekova kategorie
+
+ 
+b) došlo k umrti 
+
+nejčastejsich 5 diagnoz nebo dle jejich relativni četnosti /absolutní 
+
+vekove kategorie - relativni cetnosti/absolutní
+
+
+ps.
+(vyhodit sloupce: operace, nasledna pece, kraje)
+
+random obrazky 
+https://pixabay.com/cs/photos/nehoda-na-ly%C5%BE%C3%ADch-ly%C5%BEov%C3%A1n%C3%AD-sn%C3%ADh-zima-6933839/
+https://pixabay.com/cs/photos/j%C3%ADzdn%C3%AD-kolo-nehoda-horsk%C3%A9-kolo-592543/
+https://pixabay.com/cs/photos/utopit-lid%C3%AD-ve-vod%C4%9B-pono%C5%99en-v-3690715/
+https://pixabay.com/cs/photos/zak%C3%A1z%C3%A1no-ko%C4%8D%C3%A1rek-nemoc-4027745/
